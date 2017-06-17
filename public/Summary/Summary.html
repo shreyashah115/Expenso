@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html ng-app="myApp" ng-controller="SumCtrl" data-ng-init="refresh()">
+<head>
+	
+	<script src="../controllers/angular.min.js"></script>
+	<script src="../controllers/controller.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:300" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="../scss/common.css">
+	
+	<title> Summary </title>
+
+</head>
+
+<body>
+
+	<div class="buttons">
+  		<button class="pulse" onClick="parent.location='../index.html'"> Home </button>
+  		<button class="pulse" onClick="parent.location='../Addexpense/Expense.html'"> Add Expense </button>
+  		<!-- <div style="text-align: center;"> -->
+			<!-- <h1><span class="yellow"> Summary </span></h1> -->
+			<!-- </div> -->
+	
+
+<h1><span class="blue"></span>Expense<span class="blue"></span> <span class="yellow">summary</span></h1>
+
+</div>
+	<table class="container">
+		<thead>
+			<tr>
+				<th><h1>Category</h1></th>
+				<th><h1>Details</h1></th>
+				<th><h1>Amount</h1></th>
+				<th><h1>Date</h1></th>
+				<th><h1>Action</h1></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="x in expense">
+				<td> {{x.Category}} </td>
+				<td> {{x.Details}} </td>
+				<td> {{x.Amount}} </td>
+				<td> {{x.Date}} </td>
+				<td><button class="fill" ng-click="remove(x._id)"> Remove </button>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	
+</body>
+</html>
