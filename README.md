@@ -1,4 +1,4 @@
-# Expenso---The-expense-manager
+# Expenso
 Developed under the MEAN Stack, calculates your daily expenses, stores them in the database and retrieves it for you to manage your budget.
 
 ### Prerequisites
